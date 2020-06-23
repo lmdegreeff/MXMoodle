@@ -56,7 +56,7 @@ $queryfields = array(
         'fields' => array(
             'id' => 'permissionsid', 'overnight', 'may_drive_to_town' => 'driving',
             'may_drive_passengers' => 'passengers', 'may_ride_with' => 'riding', 'ride_permission_details' => 'riding_comment',
-            'ride_share' => 'rideshare', 'may_drive_to_boston' => 'boston', 'swim_competent' => 'swim_competent',
+            'ride_share' => 'rideshare', 'may_drive_to_boston' => 'boston', 
             'swim_allowed' => 'swim_allowed', 'boat_allowed' => 'boat_allowed'
         )
     )
