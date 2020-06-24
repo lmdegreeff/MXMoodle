@@ -19,9 +19,9 @@
  *
  * @package     local_mxschool
  * @subpackage  user_management
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
- * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -56,7 +56,7 @@ $queryfields = array(
         'fields' => array(
             'id' => 'permissionsid', 'overnight', 'may_drive_to_town' => 'driving',
             'may_drive_passengers' => 'passengers', 'may_ride_with' => 'riding', 'ride_permission_details' => 'riding_comment',
-            'ride_share' => 'rideshare', 'may_drive_to_boston' => 'boston', 
+            'ride_share' => 'rideshare', 'may_drive_to_boston' => 'boston',
             'swim_allowed' => 'swim_allowed', 'boat_allowed' => 'boat_allowed'
         )
     )
