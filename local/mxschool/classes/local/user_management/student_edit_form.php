@@ -73,14 +73,12 @@ class student_edit_form extends \local_mxschool\form {
             ),
             'permissions' => array(
                 'overnight' => array('element' => 'radio', 'options' => array('Parent', 'Host')),
-                'license' => array('element' => 'date_selector', 'options' => $dateoptions),
-                'driving' => self::ELEMENT_YES_NO,
-                'passengers' => self::ELEMENT_YES_NO,
-                'riding' => array('element' => 'radio', 'options' => array('parent', '21', 'any', 'specific')),
+                'riding' => array('element' => 'radio', 'options' => array('Parent Permission', 'Over 21', 'Any Driver', 'Specific Drivers')),
                 'riding_comment' => self::ELEMENT_TEXT_AREA,
                 'rideshare' => array('element' => 'radio', 'options' => array('Yes', 'No', 'Parent')),
                 'boston' => array('element' => 'radio', 'options' => array('Yes', 'No', 'Parent')),
-                'swim_competent' => self::ELEMENT_YES_NO,
+                'driving' => self::ELEMENT_YES_NO,
+                'passengers' => self::ELEMENT_YES_NO,
                 'swim_allowed' => self::ELEMENT_YES_NO,
                 'boat_allowed' => self::ELEMENT_YES_NO
             )
