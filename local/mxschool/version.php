@@ -18,6 +18,7 @@
  * Middlesex's Dorm and Student Functions Plugin.
  *
  * @package     local_mxschool
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -27,7 +28,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_mxschool';
-$plugin->version = 2019081400;
+$plugin->version = 2020062900;
 $plugin->release = 'v3.1';
 $plugin->requires = 2019052000; // Moodle 3.7.
 $plugin->maturity = MATURITY_STABLE;

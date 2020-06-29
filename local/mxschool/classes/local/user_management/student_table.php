@@ -19,6 +19,7 @@
  *
  * @package     local_mxschool
  * @subpackage  user_management
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -105,10 +106,10 @@ class student_table extends \local_mxschool\table {
             case 'permissions':
                 array_unshift($fields, 'p.id', 's.id AS sid');
                 array_push(
-                    $fields, 'p.overnight', 'p.license_date AS license', 'p.may_drive_to_town AS driving',
-                    'p.may_drive_passengers AS passengers', 'p.may_ride_with AS riding',
-                    'p.specific_drivers AS ridingcomment', 'p.may_use_rideshare AS rideshare', 'p.may_go_to_boston AS boston',
-                    'p.swim_competent AS swimcompetent', 'p.swim_allowed AS swimallowed', 'p.boat_allowed AS boatallowed'
+                    $fields, 'p.overnight', 'p.may_ride_with AS riding',
+                    'p.ride_permission_details AS ridingcomment', 'p.may_use_rideshare AS rideshare',
+                    'p.may_drive_to_boston AS boston', 'p.may_drive_to_town AS driving', 'p.may_drive_passengers AS passengers',
+                    'p.swim_allowed AS swimallowed', 'p.boat_allowed AS boatallowed'
                 );
                 $from[] = '{local_mxschool_permissions} p ON u.id = p.userid';
                 break;

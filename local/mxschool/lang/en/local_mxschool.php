@@ -18,6 +18,7 @@
  * English language strings for Middlesex's Dorm and Student Functions Plugin.
  *
  * @package     local_mxschool
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -166,14 +167,12 @@ $string['user_management:student_report:students:header:birthday'] = 'Birthday';
 // Permissions headers.
 $string['user_management:student_report:permissions:header:student'] = 'Name';
 $string['user_management:student_report:permissions:header:overnight'] = 'Overnight';
-$string['user_management:student_report:permissions:header:license'] = 'Issue Date of License';
 $string['user_management:student_report:permissions:header:driving'] = 'May Drive with Off-Campus Signout?';
 $string['user_management:student_report:permissions:header:passengers'] = 'May Drive Passengers?';
 $string['user_management:student_report:permissions:header:riding'] = 'May Ride With';
 $string['user_management:student_report:permissions:header:ridingcomment'] = 'Riding Comment';
 $string['user_management:student_report:permissions:header:rideshare'] = 'May Use Rideshare?';
 $string['user_management:student_report:permissions:header:boston'] = 'May Go to Boston?';
-$string['user_management:student_report:permissions:header:swimcompetent'] = 'Competent Swimmer?';
 $string['user_management:student_report:permissions:header:swimallowed'] = 'Allowed to Swim?';
 $string['user_management:student_report:permissions:header:boatallowed'] = 'Allowed in Boats?';
 
@@ -225,20 +224,18 @@ $string['user_management:student_edit:permissions'] = 'Student Permissions';
 $string['user_management:student_edit:permissions:overnight'] = 'Overnight';
 $string['user_management:student_edit:permissions:overnight:Parent'] = 'Parent';
 $string['user_management:student_edit:permissions:overnight:Host'] = 'Host';
-$string['user_management:student_edit:permissions:license'] = 'Issue Date of License';
 $string['user_management:student_edit:permissions:driving'] = 'May Drive with Off-Campus Signout?';
 $string['user_management:student_edit:permissions:passengers'] = 'May Drive Passengers?';
 $string['user_management:student_edit:permissions:riding'] = 'May Ride With';
-$string['user_management:student_edit:permissions:riding:parent'] = 'Parent Permission';
-$string['user_management:student_edit:permissions:riding:21'] = 'Over 21';
-$string['user_management:student_edit:permissions:riding:any'] = 'Any Driver';
-$string['user_management:student_edit:permissions:riding:specific'] = 'Specific Drivers';
+$string['user_management:student_edit:permissions:riding:Parent Permission'] = 'Parent Permission';
+$string['user_management:student_edit:permissions:riding:Over 21'] = 'Over 21';
+$string['user_management:student_edit:permissions:riding:Any Driver'] = 'Any Driver';
+$string['user_management:student_edit:permissions:riding:Specific Drivers'] = 'Specific Drivers';
 $string['user_management:student_edit:permissions:riding_comment'] = 'Riding Comment';
 $string['user_management:student_edit:permissions:rideshare'] = 'May Use Rideshare?';
 $string['user_management:student_edit:permissions:rideshare:Parent'] = 'Parent';
 $string['user_management:student_edit:permissions:boston'] = 'May Go to Boston?';
 $string['user_management:student_edit:permissions:boston:Parent'] = 'Parent';
-$string['user_management:student_edit:permissions:swim_competent'] = 'Competent Swimmer?';
 $string['user_management:student_edit:permissions:swim_allowed'] = 'Allowed to Swim?';
 $string['user_management:student_edit:permissions:boat_allowed'] = 'Allowed in Boats?';
 

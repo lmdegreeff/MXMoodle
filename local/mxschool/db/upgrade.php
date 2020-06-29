@@ -18,6 +18,7 @@
  * Database updgrade steps for Middlesex's Dorm and Student Functions Plugin.
  *
  * @package     local_mxschool
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -852,6 +853,62 @@ function xmldb_local_mxschool_upgrade($oldversion) {
 
         // Mxschool savepoint reached.
         upgrade_plugin_savepoint(true, 2019080801, 'local', 'mxschool');
+    }
+
+    if ($oldversion < 2020062800) {
+
+        // Define field swim_competent to be dropped from local_mxschool_permissions.
+        $table = new xmldb_table('local_mxschool_permissions');
+        $field = new xmldb_field('swim_competent');
+
+        // Conditionally launch drop field swim_competent.
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->drop_field($table, $field);
+        }
+
+        // Mxschool savepoint reached.
+        upgrade_plugin_savepoint(true, 2020062800, 'local', 'mxschool');
+    }
+
+    if ($oldversion < 2020062900) {
+
+        // Define field license_date to be dropped from local_mxschool_permissions.
+        $table = new xmldb_table('local_mxschool_permissions');
+        $field = new xmldb_field('license_date');
+
+        // Conditionally launch drop field license_date.
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->drop_field($table, $field);
+        }
+
+        // Mxschool savepoint reached.
+        upgrade_plugin_savepoint(true, 2020062900, 'local', 'mxschool');
+    }
+
+    if ($oldversion < 2020062900) {
+
+        // Rename field may_go_to_boston on table local_mxschool_permissions to NEWNAMEGOESHERE.
+        $table = new xmldb_table('local_mxschool_permissions');
+        $field = new xmldb_field('may_go_to_boston', XMLDB_TYPE_CHAR, '10', null, null, null, null, 'may_use_rideshare');
+
+        // Launch rename field may_go_to_boston.
+        $dbman->rename_field($table, $field, 'may_drive_to_boston');
+
+        // Mxschool savepoint reached.
+        upgrade_plugin_savepoint(true, 2020062900, 'local', 'mxschool');
+    }
+
+    if ($oldversion < 2020062900) {
+
+        // Rename field specific_drivers on table local_mxschool_permissions to NEWNAMEGOESHERE.
+        $table = new xmldb_table('local_mxschool_permissions');
+        $field = new xmldb_field('specific_drivers', XMLDB_TYPE_TEXT, null, null, null, null, null, 'may_ride_with');
+
+        // Launch rename field specific_drivers.
+        $dbman->rename_field($table, $field, 'ride_permission_details');
+
+        // Mxschool savepoint reached.
+        upgrade_plugin_savepoint(true, 2020062900, 'local', 'mxschool');
     }
 
     return true;
