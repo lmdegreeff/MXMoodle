@@ -18,6 +18,7 @@
  * External functions for Middlesex's eSignout Subplugin.
  *
  * @package     local_signout
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -141,7 +142,7 @@ class local_signout_external extends external_api {
                 break;
             case 'Specific Drivers':
                 $result->passengerwarning = get_config('local_signout', 'off_campus_form_warning_passenger_specific')
-                    . " {$permissions->specific_drivers}";
+                    . " {$permissions->ride_permission_details}";
                 break;
             case 'Over 21':
             default:

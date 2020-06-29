@@ -63,16 +63,16 @@ class student_table extends \local_mxschool\table {
                 break;
             case 'permissions':
                 $columns = array(
-                    'student', 'overnight', 'license', 'driving', 'passengers', 'riding', 'ridingcomment', 'rideshare', 'boston',
-                    'swimcompetent', 'swimallowed', 'boatallowed'
+                    'student', 'overnight', 'riding', 'ridingcomment', 'rideshare', 'boston', 'driving', 'passengers',
+                     'swimallowed', 'boatallowed'
                 );
                 $sortable = array(
-                    'student', 'overnight', 'license', 'driving', 'passengers', 'riding', 'rideshare', 'boston',
-                    'swimcompetent', 'swimallowed', 'boatallowed'
+                    'student', 'overnight', 'riding', 'ridingcomment', 'rideshare', 'boston', 'driving', 'passengers',
+                     'swimallowed', 'boatallowed'
                 );
                 $centered = array(
-                    'overnight', 'license', 'driving', 'passengers', 'rideshare', 'boston', 'swimcompetent', 'swimallowed',
-                    'boatallowed'
+                    'overnight', 'riding', 'ridingcomment', 'rideshare', 'boston', 'driving', 'passengers',
+                     'swimallowed', 'boatallowed'
                 );
                 break;
             case 'parents':

@@ -19,6 +19,7 @@
  *
  * @package     local_signout
  * @subpackage  off_campus
+ * @author      Lucas DeGreeff, Class of 2022 <lmdegreeff@mxschool.edu>
  * @author      Jeremiah DeGreeff, Class of 2019 <jrdegreeff@mxschool.edu>
  * @author      Charles J McDonald, Academic Technology Specialist <cjmcdonald@mxschool.edu>
  * @copyright   2019 Middlesex School, 1400 Lowell Rd, Concord MA 01742 All Rights Reserved.
@@ -46,7 +47,7 @@ class submitted extends \local_mxschool\notification {
                         t.required_permissions AS permissions, t.name AS type, t.email_warning AS warning, oc.other, oc.passengers,
                         dr.userid as driver, oc.destination, oc.departure_time AS departuretime, oc.time_modified AS timesubmitted,
                         p.may_drive_passengers AS driverpermission, p.may_ride_with AS passengerpermission,
-                        p.specific_drivers AS specificdrivers, p.may_use_rideshare AS ridesharepermission
+                        p.ride_permission_details AS specificdrivers, p.may_use_rideshare AS ridesharepermission
                  FROM {local_signout_off_campus} oc LEFT JOIN {user} u ON oc.userid = u.id
                                                     LEFT JOIN {local_mxschool_student} s ON u.id = s.userid
                                                     LEFT JOIN {local_mxschool_dorm} d ON s.dormid = d.id
