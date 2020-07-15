@@ -869,7 +869,6 @@ function xmldb_local_mxschool_upgrade($oldversion) {
         // Mxschool savepoint reached.
         upgrade_plugin_savepoint(true, 2020062800, 'local', 'mxschool');
     }
-
     if ($oldversion < 2020062900) {
 
         // Define field license_date to be dropped from local_mxschool_permissions.
@@ -881,24 +880,12 @@ function xmldb_local_mxschool_upgrade($oldversion) {
             $dbman->drop_field($table, $field);
         }
 
-        // Mxschool savepoint reached.
-        upgrade_plugin_savepoint(true, 2020062900, 'local', 'mxschool');
-    }
-
-    if ($oldversion < 2020062900) {
-
         // Rename field may_go_to_boston on table local_mxschool_permissions to may_drive_to_boston.
         $table = new xmldb_table('local_mxschool_permissions');
         $field = new xmldb_field('may_go_to_boston', XMLDB_TYPE_CHAR, '10', null, null, null, null, 'may_use_rideshare');
 
         // Launch rename field may_go_to_boston.
         $dbman->rename_field($table, $field, 'may_drive_to_boston');
-
-        // Mxschool savepoint reached.
-        upgrade_plugin_savepoint(true, 2020062900, 'local', 'mxschool');
-    }
-
-    if ($oldversion < 2020062900) {
 
         // Rename field specific_drivers on table local_mxschool_permissions to ride_permission_details.
         $table = new xmldb_table('local_mxschool_permissions');
