@@ -887,7 +887,7 @@ function xmldb_local_mxschool_upgrade($oldversion) {
 
     if ($oldversion < 2020062900) {
 
-        // Rename field may_go_to_boston on table local_mxschool_permissions to NEWNAMEGOESHERE.
+        // Rename field may_go_to_boston on table local_mxschool_permissions to may_drive_to_boston.
         $table = new xmldb_table('local_mxschool_permissions');
         $field = new xmldb_field('may_go_to_boston', XMLDB_TYPE_CHAR, '10', null, null, null, null, 'may_use_rideshare');
 
@@ -900,7 +900,7 @@ function xmldb_local_mxschool_upgrade($oldversion) {
 
     if ($oldversion < 2020062900) {
 
-        // Rename field specific_drivers on table local_mxschool_permissions to NEWNAMEGOESHERE.
+        // Rename field specific_drivers on table local_mxschool_permissions to ride_permission_details.
         $table = new xmldb_table('local_mxschool_permissions');
         $field = new xmldb_field('specific_drivers', XMLDB_TYPE_TEXT, null, null, null, null, null, 'may_ride_with');
 
