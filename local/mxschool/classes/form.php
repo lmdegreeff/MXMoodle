@@ -45,6 +45,7 @@ abstract class form extends \moodleform {
     const ELEMENT_YES_NO_REQUIRED = array(
         'element' => 'radio', 'options' => array('Yes', 'No'), 'rules' => array('required')
     );
+    const ELEMENT_YES_NO_PARENT = array('element' => 'radio', 'options' => array('Yes', 'No', 'Parent'));
     const ELEMENT_BOOLEAN = array('element' => 'radio', 'options' => array(1, 0));
     const ELEMENT_BOOLEAN_REQUIRED = array('element' => 'radio', 'options' => array(1, 0), 'rules' => array('required'));
     const ELEMENT_EMAIL = array(
